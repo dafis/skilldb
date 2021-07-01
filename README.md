@@ -1,24 +1,15 @@
-<!-- PROJECT SHIELDS -->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
-<!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/dafis/skildb">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">Skill-DB</h3>
+  <h2 align="center">Skill-DB</h2>
 
   <p align="center">
-    <br />
-    <a href="https://github.com/dafis/skilldb"><strong>Explore the docs »</strong></a>
-    <br />
+    This is a show case repo I created to expose my development skills to propective customers.
     <br />
     <a href="https://github.com/dafis/skilldb">View Demo</a>
     ·
@@ -29,65 +20,23 @@
 </p>
 
 
-
-<!-- TABLE OF CONTENTS -->
-<details open="open">
-  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
-  </ol>
-</details>
-
-
-
-<!-- ABOUT THE PROJECT -->
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`dafis`, `skilldb`, `twitter_handle`, `email`, `project_title`, `project_description`
-
-
 ### Built With
 
-* []()
-* []()
-* []()
+* [Django](https://www.djangoproject.com/)
+* [Wagtail](https://wagtail.io/)
 
-
-
-<!-- GETTING STARTED -->
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+This repo is only tested for a linux installations. Python >= 3.6 must be installed.
+
 
 ### Installation
 
@@ -95,33 +44,44 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    git clone https://github.com/dafis/skilldb.git
    ```
-2. Install NPM packages
+
+2. create a python environment and activate it
    ```sh
-   npm install
+   cd skilldb
+   python3 -m venv .venv
+   . .venv/bin/activate
    ```
 
+3. install the required python packages
+   ```sh
+   pip3 install -r requirements.txt
+   ```
 
+4. perform the migration steps
+   ```sh
+   python3 manage.py migrate
+   python3 manage.py createsuperuser
+   ```
 
-<!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+1. run the server in dev mode
+   ```sh
+   python3 manage.py runserver
+   ```
 
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
-
-<!-- ROADMAP -->
 ## Roadmap
 
 See the [open issues](https://github.com/dafis/skilldb/issues) for a list of proposed features (and known issues).
 
 
-
-<!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+As I plan to go back to a close source project, it is not recommended to contribute to this project, but you are free
+and welcome to fork the project. I would also rethink my plan and stay with open source, if many of you wish so.
+
+If you still want to contribute, here's how. And don't forget to ask me, if I would accept the changes, before you
+invest too much time.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -129,37 +89,14 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-
-
-<!-- LICENSE -->
 ## License
 
 Distributed under the UNLICENSE. See `LICENSE` for more information.
 
-
-
-<!-- CONTACT -->
 ## Contact
 
-Peter Paul Kiefer - [@twitter_handle](https://twitter.com/) - email
+Peter Paul Kiefer - [@pkiefer42](https://twitter.com/pkiefer42) - dafisppk@gmail.com
 
-Project Link: [https://github.com/dafis/skilldb](https://github.com/dafis/skilldb)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-* []()
-* []()
-* []()
-
-
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/dafis/skilldb.svg?style=for-the-badge
 [contributors-url]: https://github.com/dafis/skilldb/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/dafis/skilldb.svg?style=for-the-badge
@@ -169,6 +106,6 @@ Project Link: [https://github.com/dafis/skilldb](https://github.com/dafis/skilld
 [issues-shield]: https://img.shields.io/github/issues/dafis/skilldb.svg?style=for-the-badge
 [issues-url]: https://github.com/dafis/skilldb/issues
 [license-shield]: https://img.shields.io/github/license/dafis/skilldb.svg?style=for-the-badge
-[license-url]: https://github.com/dafis/skilldb/blob/master/LICENSE.txt
+[license-url]: https://github.com/dafis/skilldb/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/dafis
