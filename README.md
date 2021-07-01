@@ -17,14 +17,14 @@
 
   <p align="center">
     <br />
-    <a href="https://github.com/ppk42/skilldb_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/ppk42/skilldb"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/ppk42/skilldb_name">View Demo</a>
+    <a href="https://github.com/ppk42/skilldb">View Demo</a>
     ·
-    <a href="https://github.com/ppk42/skilldb_name/issues">Report Bug</a>
+    <a href="https://github.com/ppk42/skilldb/issues">Report Bug</a>
     ·
-    <a href="https://github.com/ppk42/skilldb_name/issues">Request Feature</a>
+    <a href="https://github.com/ppk42/skilldb/issues">Request Feature</a>
   </p>
 </p>
 
@@ -65,7 +65,7 @@
 
 Here's a blank template to get started:
 **To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`ppk42`, `skilldb_name`, `twitter_handle`, `email`, `project_title`, `project_description`
+`ppk42`, `skilldb`, `twitter_handle`, `email`, `project_title`, `project_description`
 
 
 ### Built With
@@ -93,7 +93,7 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the skilldb
    ```sh
-   git clone https://github.com/ppk42/skilldb_name.git
+   git clone https://github.com/ppk42/skilldb.git
    ```
 2. Install NPM packages
    ```sh
@@ -114,7 +114,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/ppk42/skilldb_name/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/ppk42/skilldb/issues) for a list of proposed features (and known issues).
 
 
 
@@ -143,7 +143,7 @@ Distributed under the UNLICENSE. See `LICENSE` for more information.
 
 Peter Paul Kiefer - [@twitter_handle](https://twitter.com/) - email
 
-Project Link: [https://github.com/ppk42/skilldb_name](https://github.com/ppk42/skilldb_name)
+Project Link: [https://github.com/ppk42/skilldb](https://github.com/ppk42/skilldb)
 
 
 
