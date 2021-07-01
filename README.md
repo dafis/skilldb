@@ -9,7 +9,7 @@
   <h2 align="center">Skill-DB</h2>
 
   <p align="center">
-    This is a show case repo I created to expose my development skills to propective customers.
+    This is a show case repo I created to expose my development skills to prospective customers.
     <br />
     <a href="https://github.com/dafis/skilldb">View Demo</a>
     ·
