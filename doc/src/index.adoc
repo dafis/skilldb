@@ -1,0 +1,31 @@
+= Skill-DB Prototyp 
+Peter Paul Kiefer
+v1, 1. Juli 2021
+:imagesdir: ./images
+:icons: font
+:toc: right
+:toc-title: Inhalt
+:toclevels: 3
+:appendix-caption: Anhang
+:table-caption: Tabelle
+:figure-caption: Abbildung
+:version-lable: Version
+:source-highlighter: pygments
+:stem: 
+
+Hier beschreibe ich die Prototypentwicklung der Skill-DB. 
+
+== Motivation und Ziele
+
+
+[appendix]
+== Dokumenthistorie
+
+[cols="1,4a"]
+|===
+
+| 2021-07-01 | 
+* Initiale Erstellung
+
+|===
+
