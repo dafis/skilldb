@@ -7,8 +7,6 @@ repositories {
     mavenCentral()
 }
 
-
-
 asciidoctor {
   
   sourceDir  file('src')
@@ -24,5 +22,5 @@ asciidoctor {
   }
 
   outputDir  file('build')
-  
+
 }
