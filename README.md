@@ -9,7 +9,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/ppk42/skildb">
+  <a href="https://github.com/dafis/skildb">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -17,14 +17,14 @@
 
   <p align="center">
     <br />
-    <a href="https://github.com/ppk42/skilldb"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/dafis/skilldb"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/ppk42/skilldb">View Demo</a>
+    <a href="https://github.com/dafis/skilldb">View Demo</a>
     ·
-    <a href="https://github.com/ppk42/skilldb/issues">Report Bug</a>
+    <a href="https://github.com/dafis/skilldb/issues">Report Bug</a>
     ·
-    <a href="https://github.com/ppk42/skilldb/issues">Request Feature</a>
+    <a href="https://github.com/dafis/skilldb/issues">Request Feature</a>
   </p>
 </p>
 
@@ -65,7 +65,7 @@
 
 Here's a blank template to get started:
 **To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`ppk42`, `skilldb`, `twitter_handle`, `email`, `project_title`, `project_description`
+`dafis`, `skilldb`, `twitter_handle`, `email`, `project_title`, `project_description`
 
 
 ### Built With
@@ -93,7 +93,7 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the skilldb
    ```sh
-   git clone https://github.com/ppk42/skilldb.git
+   git clone https://github.com/dafis/skilldb.git
    ```
 2. Install NPM packages
    ```sh
@@ -114,7 +114,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/ppk42/skilldb/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/dafis/skilldb/issues) for a list of proposed features (and known issues).
 
 
 
@@ -143,7 +143,7 @@ Distributed under the UNLICENSE. See `LICENSE` for more information.
 
 Peter Paul Kiefer - [@twitter_handle](https://twitter.com/) - email
 
-Project Link: [https://github.com/ppk42/skilldb](https://github.com/ppk42/skilldb)
+Project Link: [https://github.com/dafis/skilldb](https://github.com/dafis/skilldb)
 
 
 
@@ -160,15 +160,15 @@ Project Link: [https://github.com/ppk42/skilldb](https://github.com/ppk42/skilld
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/ppk42/skilldb.svg?style=for-the-badge
-[contributors-url]: https://github.com/ppk42/skilldb/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/ppk42/skilldb.svg?style=for-the-badge
-[forks-url]: https://github.com/ppk42/skilldb/network/members
-[stars-shield]: https://img.shields.io/github/stars/ppk42/skilldb.svg?style=for-the-badge
-[stars-url]: https://github.com/ppk42/skilldb/stargazers
-[issues-shield]: https://img.shields.io/github/issues/ppk42/skilldb.svg?style=for-the-badge
-[issues-url]: https://github.com/ppk42/skilldb/issues
-[license-shield]: https://img.shields.io/github/license/ppk42/skilldb.svg?style=for-the-badge
-[license-url]: https://github.com/ppk42/skilldb/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/dafis/skilldb.svg?style=for-the-badge
+[contributors-url]: https://github.com/dafis/skilldb/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/dafis/skilldb.svg?style=for-the-badge
+[forks-url]: https://github.com/dafis/skilldb/network/members
+[stars-shield]: https://img.shields.io/github/stars/dafis/skilldb.svg?style=for-the-badge
+[stars-url]: https://github.com/dafis/skilldb/stargazers
+[issues-shield]: https://img.shields.io/github/issues/dafis/skilldb.svg?style=for-the-badge
+[issues-url]: https://github.com/dafis/skilldb/issues
+[license-shield]: https://img.shields.io/github/license/dafis/skilldb.svg?style=for-the-badge
+[license-url]: https://github.com/dafis/skilldb/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/ppk42
+[linkedin-url]: https://linkedin.com/in/dafis
