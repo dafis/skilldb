@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+{% block content %}
+{% include "includes/topnav.html" %}
+<div class="container">
+    <section class="about__main">
+    {{ self.content|richtext }}
+    </section>    
+</div>
+{% endblock content %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+{% block content %}
+{% include "includes/topnav.html" %}
+<div class="container">
+<h2>Contact Sended</h2>
+<section>
+{{ self.thank_you_text|richtext }}
+</section>
+</div>
+{% endblock content %}

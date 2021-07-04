@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+{% block content %}
+{% include "includes/topnav.html" %}
+<div class="container">
+<h2>Contact</h2>
+<section>
+{{ self.intro|richtext }}
+</section>
+<Form action="{% pageurl page %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_ul }}
+
+    <input type="submit">
+</Form>
+</div>
+{% endblock content %}
