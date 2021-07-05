@@ -1,4 +1,8 @@
-<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light p-3">
+{% load menu_tags %}
+{% get_menu "main-right" as rmenu %}
+{% get_menu "main-left" as lmenu %}
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light p-3 shadow">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">Skill DB</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
@@ -8,33 +12,22 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        {% if lmenu %}
+        {% for item in lmenu.menu_items.all %}
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/profiles">Consultant Profiles</a>
+          <a class="nav-link" href="{{ item.link }}">{{ item.title }}</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/explorer">Skill and Project Explorer</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Search Templates
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/peter-paul-kiefer">Software Developer Java</a></li>
-            <li><a class="dropdown-item" href="#">Software Developer Javascript</a></li>
-            <li><a class="dropdown-item" href="#">Software Developer Python</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Tester Enterprise Projects</a></li>
-            <li><a class="dropdown-item" href="#">Tester Web Projects</a></li>
-          </ul>
-        </li>
+        {% endfor %}
+        {% endif %}
       </ul>
       <ul class="navbar-nav mb-2 mb-lg-0 d-flex justify-content-end">
+        {% if rmenu %}
+        {% for item in rmenu.menu_items.all %}
         <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact</a>
+          <a class="nav-link" href="{{ item.link }}">{{ item.title }}</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/about">About</a>
-        </li>
+        {% endfor %}
+        {% endif %}
       </ul>
     </div>
   </div>

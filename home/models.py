@@ -2,32 +2,48 @@ from django.db import models
 
 from modelcluster.fields import ParentalKey
 
-
 from wagtail.core.models import Page
 from wagtail.core.fields import RichTextField
-from wagtail.admin.edit_handlers import FieldPanel, FieldRowPanel, InlinePanel, MultiFieldPanel
+
+from wagtail.admin.edit_handlers import ( 
+    FieldPanel, 
+    FieldRowPanel, 
+    InlinePanel, 
+    MultiFieldPanel
+)
+
 from wagtail.contrib.forms.models import (
     AbstractEmailForm,
     AbstractFormField,
 )
-from wagtail.search import index
 
 class HomePage(Page):
+    """The start page of the Skill-DB site. 
+    This page must NOT exist more than one time for the site.
     """
-    The start page of the Skill-DB site. Visitors who are not logged in
-    are redirected to this page. This page must NOT exist more than one time for the site.
-    """
+
     max_count = 1
 
+    last_name = models.CharField(max_length=100)
+
+    first_name = models.CharField(max_length=100)
+
+    birth_date = models.DateField(null=True, blank=True)
+
+    content_panels = Page.content_panels + [
+        FieldPanel("first_name"),
+        FieldPanel("last_name"),
+        FieldPanel("birth_date"),
+    ]
+
+    @property 
+    def full_name(self):
+        return self.first_name + " " + self.last_name
 
 class AboutPage(Page):
-    """ Customizable about page. """
+    """A customizable About page."""
 
     content = RichTextField()
-
-    search_fields = Page.search_fields + [
-        index.SearchField('content'),
-    ]
 
     content_panels = Page.content_panels + [
         FieldPanel("content", classname="full"),
@@ -60,7 +76,3 @@ class ContactPage(AbstractEmailForm):
             FieldPanel('subject'),
         ], heading = "Email Settings" )
     ]
-
-
-
-

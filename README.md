@@ -22,7 +22,9 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+This project is mentioned as a show case for my development skills.
+I plan to install it on AWS and use it as an personal online profile. 
+As it is an open source projekt, you are free to copy and use it on your own.
 
 ### Built With
 
