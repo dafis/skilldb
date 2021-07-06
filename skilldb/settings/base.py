@@ -13,6 +13,7 @@ INSTALLED_APPS = [
     'portfolio',
     'profil',
     'menus',
+    'flex',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
@@ -25,6 +26,9 @@ INSTALLED_APPS = [
     'wagtail.search',
     'wagtail.admin',
     'wagtail.core',
+
+    'wagtail_localize',
+    'wagtail_localize.locales',
 
     'modelcluster',
     'taggit',
@@ -47,7 +51,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-
+    'django.middleware.locale.LocaleMiddleware',
+    
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
 
@@ -66,6 +71,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.i18n',
             ],
         },
     },
@@ -98,6 +104,12 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
+# https://docs.wagtail.io/en/stable/advanced_topics/i18n.html#configuration
+WAGTAIL_I18N_ENABLED = True
+WAGTAIL_CONTENT_LANGUAGES = LANGUAGES = [
+    ('en', "English"),
+    ('de', "Deutsch"),
+]
 
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 STATICFILES_FINDERS = [

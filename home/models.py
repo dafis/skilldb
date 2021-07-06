@@ -12,6 +12,10 @@ from wagtail.admin.edit_handlers import (
     MultiFieldPanel
 )
 
+from wagtail.images.edit_handlers import ( 
+    ImageChooserPanel
+)
+
 from wagtail.contrib.forms.models import (
     AbstractEmailForm,
     AbstractFormField,
@@ -24,16 +28,29 @@ class HomePage(Page):
 
     max_count = 1
 
+    profile_title = models.CharField(max_length=100)
+
     last_name = models.CharField(max_length=100)
 
     first_name = models.CharField(max_length=100)
 
     birth_date = models.DateField(null=True, blank=True)
 
+    profile_image = models.ForeignKey(
+        'wagtailimages.Image',
+        blank=False,
+        null=True,
+        related_name='+',
+        help_text='Header background image',
+        on_delete=models.SET_NULL,
+    )
+
     content_panels = Page.content_panels + [
+        FieldPanel("profile_title"),
         FieldPanel("first_name"),
         FieldPanel("last_name"),
         FieldPanel("birth_date"),
+        ImageChooserPanel("profile_image"),
     ]
 
     @property 
