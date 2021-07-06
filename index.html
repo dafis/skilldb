@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
 <meta name="author" content="Peter Paul Kiefer">
-<title>Skill-DB Prototyp</title>
+<title>Skill-DB Prototype</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -440,7 +440,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-right">
 <div id="header">
-<h1>Skill-DB Prototyp</h1>
+<h1>Skill-DB Prototype</h1>
 <div class="details">
 <span id="author" class="author">Peter Paul Kiefer</span><br>
 <span id="revnumber">version 1,</span>
@@ -449,8 +449,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Inhalt</div>
 <ul class="sectlevel1">
-<li><a href="#_motivation_und_ziele">Motivation und Ziele</a></li>
-<li><a href="#_dokumenthistorie">Anhang A: Dokumenthistorie</a></li>
+<li><a href="#_motivation">Motivation</a></li>
+<li><a href="#_technical_decissions">Technical Decissions</a>
+<ul class="sectlevel2">
+<li><a href="#_design">Design</a></li>
+</ul>
+</li>
+<li><a href="#_projectstructure">Projectstructure</a></li>
+<li><a href="#_history">Anhang A: History</a></li>
 </ul>
 </div>
 </div>
@@ -458,18 +464,139 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Hier beschreibe ich die Prototypentwicklung der Skill-DB.</p>
+<p>This is a description of "Skill DB"; a web portal used to expose development skills to
+prospective customers. Skill DB is a real project I plan to extend and use it
+on my own and for commercial purposes. For now I&#8217;ve exposed it to the public domain
+as a show case and example how I would create a web portal with django and wagtail.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_motivation_und_ziele">Motivation und Ziele</h2>
+<h2 id="_motivation">Motivation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>I&#8217;m a software engineer since 1994. For more than 25 years I worked on various kinds of projects,
+with a variety of programming languages, frameworks, development techniques and tools. I worked with
+different roles like developer, tester, teacher and data engineer. Most of the time, project acquisition
+was not a problem. We were known to a few good customers and constantly hired for projects. But the times
+have changed.</p>
+</div>
+<div class="paragraph">
+<p>Now I need to acquire new customers and therefor I had to expose my skills and expertise and I need references.
+The latter is really a challenge, because all of my former employers or project customers prefer not to be
+contacted by recruiters or other prospective customers. So I can not named them as references.</p>
+</div>
+<div class="paragraph">
+<p>To get out of this situation, I decided to create a "Skill DB", which is mainly a platform to inform
+prospective customers about my expertise and work skills, but can also be used for itself as a show
+case for my skills. I started to implement the "Skill DB" with django a few months ago.</p>
+</div>
+<div class="paragraph">
+<p>On June, 29 2021 I applied for a web project and the proposed framework was django/wagtail. I know django
+but I was not aware of wagtail until then. So I checked it out and found a precious gem. The prospective customer
+asked me to name a reference or show me some working code, and I commited me to show him the actual "Skill DB"
+django code. But then I evaluated wagtail a bit more and was fascinated by this framework.</p>
+</div>
+<div class="paragraph">
+<p>I decided spontanously to reimplement the "Skill DB" with wagtail, deploy it to AWS EC2, and use it as a show case
+and to expose my profile to the net. I try to achieve this in two days (a weekend), in the hope to convince the
+customer about my programming skills with HTML, CSS, Python3, Django and Wagtail.</p>
+</div>
+<div class="ulist">
+<div class="title">Project Goals</div>
+<ul>
+<li>
+<p>entry page</p>
+<div class="ulist">
+<ul>
+<li>
+<p>optional login possible</p>
+</li>
+<li>
+<p>welcome</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>global menu (to the main pages)</p>
+</li>
+<li>
+<p>main pages</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Home (Entry Page)</p>
+</li>
+<li>
+<p>PPK Profile and CV (without the Skills and Projects)</p>
+</li>
+<li>
+<p>Skill Listing, grouped by skill groups and work roles</p>
+</li>
+<li>
+<p>Project Listing (completed and ongoing projects)</p>
+</li>
+<li>
+<p>Skill and Project Explorer (can be used by interested visitors to generate a custmized profile)</p>
+</li>
+<li>
+<p>Work Examples (exposed coding and work examples e.g. on Github)</p>
+</li>
+<li>
+<p>Blog (proof own expertise by writing articles)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Authentication and Authorization (Some areas can only be entered by registered users,
+some are pulic and some need editor or administration roles)</p>
+</li>
+<li>
+<p>Member pages (Workarea for registered members)</p>
+</li>
+<li>
+<p>API to recieve documents (push service) that can be downloaded from Member pages</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_technical_decissions">Technical Decissions</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_design">Design</h3>
+<div class="paragraph">
+<p>As I&#8217;m not a designer I decided to use a CSS framework (Bootstrap 5) to ease the development of the HTML templates.
+In most commercial projects there are designers involved. For such a project, I prefer not use a CSS framework as, it limits the
+options to implement their requirements. If the frontend implementation is based on components, I often use the
+BEM naming schema.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+If there is still time remaining at the end, I&#8217;ll add a page where I use BEM as an example.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_projectstructure">Projectstructure</h2>
 <div class="sectionbody">
 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_dokumenthistorie">Anhang A: Dokumenthistorie</h2>
+<h2 id="_history">Anhang A: History</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -482,7 +609,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
 <li>
-<p>Initiale Erstellung</p>
+<p>Initial Creation</p>
 </li>
 </ul>
 </div></div></td>
@@ -495,7 +622,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="footer">
 <div id="footer-text">
 Version 1<br>
-Last updated 2021-07-01 17:56:14 +0200
+Last updated 2021-07-03 10:45:09 +0200
 </div>
 </div>
 <script type="text/x-mathjax-config">
