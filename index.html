@@ -457,10 +457,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_technical_decissions">Technical Decissions</a>
 <ul class="sectlevel2">
+<li><a href="#_backend">Backend</a></li>
 <li><a href="#_design">Design</a></li>
 </ul>
 </li>
-<li><a href="#_projectstructure">Projectstructure</a></li>
+<li><a href="#_project_structure">Project Structure</a></li>
 <li><a href="#_history">Appendix A: History</a></li>
 </ul>
 </div>
@@ -519,34 +520,64 @@ It can also be named as a show case for my development skills to prospective cus
 </div>
 <div class="sect2">
 <h3 id="_goals">Goals</h3>
+<div class="paragraph">
+<p>I want to develop a wagtail based CV and Profile Site for consultants. As I&#8217;m am mainly a developer,
+I&#8217;ll focus on development aspects but I&#8217;ll do my best to make the Site also useful for other
+kind of consultants like Tester, Architects, Designer, Data Engineers and so on.</p>
+</div>
+<div class="paragraph">
+<p>The following list summarizes the my initial goals:</p>
+</div>
 <div class="ulist">
 <div class="title">Project Goals</div>
 <ul>
 <li>
-<p>entry page</p>
+<p>variable types of entry pages</p>
 <div class="ulist">
 <ul>
 <li>
-<p>optional login possible</p>
+<p>single person page (Profile Page; e.g. one developer)</p>
 </li>
 <li>
-<p>welcome</p>
+<p>person group page (Profile Selector Page; e.g. list of the consultants of an agency)</p>
+</li>
+<li>
+<p>optional login possible, after login it&#8217;s possible to use the explorer and a private chat</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>global menu (to the main pages)</p>
+<p>navigation; a selector that is used to route pages or switch dynamic content</p>
 </li>
 <li>
-<p>main pages</p>
+<p>menu system; one can define menus and attach them to navigations</p>
+</li>
+<li>
+<p>a generic page type used for about, contact, legal and other pages</p>
+</li>
+<li>
+<p>a set of page components to build generic pages with</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Home (Entry Page)</p>
+<p>title and text block</p>
 </li>
 <li>
-<p>PPK Profile and CV (without the Skills and Projects)</p>
+<p>contact block</p>
+</li>
+<li>
+<p>additional types</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>a set of page types for specific informations</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Profile/CV Page</p>
 </li>
 <li>
 <p>Skill Listing, grouped by skill groups and work roles</p>
@@ -555,10 +586,10 @@ It can also be named as a show case for my development skills to prospective cus
 <p>Project Listing (completed and ongoing projects)</p>
 </li>
 <li>
-<p>Skill and Project Explorer (can be used by interested visitors to generate a custmized profile)</p>
+<p>Explorer (can be used by registered visitors to generate custmized profiles)</p>
 </li>
 <li>
-<p>Work Examples (exposed coding and work examples e.g. on Github)</p>
+<p>Examples (exposed coding and work examples e.g. on Github)</p>
 </li>
 <li>
 <p>Blog (proof own expertise by writing articles)</p>
@@ -571,10 +602,7 @@ It can also be named as a show case for my development skills to prospective cus
 some are pulic and some need editor or administration roles)</p>
 </li>
 <li>
-<p>Member pages (Workarea for registered members)</p>
-</li>
-<li>
-<p>API to recieve documents (push service) that can be downloaded from Member pages</p>
+<p>API to recieve documents (push service) and images</p>
 </li>
 </ul>
 </div>
@@ -584,6 +612,12 @@ some are pulic and some need editor or administration roles)</p>
 <div class="sect1">
 <h2 id="_technical_decissions">Technical Decissions</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_backend">Backend</h3>
+<div class="paragraph">
+<p>The backend will be realized with Wagtail.</p>
+</div>
+</div>
 <div class="sect2">
 <h3 id="_design">Design</h3>
 <div class="paragraph">
@@ -608,9 +642,11 @@ If there is still time remaining at the end, I&#8217;ll add a page where I use B
 </div>
 </div>
 <div class="sect1">
-<h2 id="_projectstructure">Projectstructure</h2>
+<h2 id="_project_structure">Project Structure</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p>===</p>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -656,7 +692,7 @@ If there is still time remaining at the end, I&#8217;ll add a page where I use B
 <div id="footer">
 <div id="footer-text">
 Version 2<br>
-Last updated 2021-07-06 11:26:13 +0200
+Last updated 2021-07-06 12:01:41 +0200
 </div>
 </div>
 <script type="text/x-mathjax-config">
