@@ -449,7 +449,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
+<li><a href="#_intro">Intro</a>
+<ul class="sectlevel2">
 <li><a href="#_motivation">Motivation</a></li>
+<li><a href="#_goals">Goals</a></li>
+</ul>
+</li>
 <li><a href="#_technical_decissions">Technical Decissions</a>
 <ul class="sectlevel2">
 <li><a href="#_design">Design</a></li>
@@ -472,8 +477,10 @@ as a show case and example how I would create a web portal with django and wagta
 </div>
 </div>
 <div class="sect1">
-<h2 id="_motivation">Motivation</h2>
+<h2 id="_intro">Intro</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_motivation">Motivation</h3>
 <div class="paragraph">
 <p>I&#8217;m a software engineer since 1994. For more than 25 years I worked on various kinds of projects,
 with a variety of programming languages, frameworks, development techniques and tools. I worked with
@@ -493,14 +500,25 @@ case for my skills. I started to implement the "Skill DB" with django a few week
 </div>
 <div class="paragraph">
 <p>On June, 29 2021 I applied for a web project and the proposed framework was django/wagtail. I know django
-but I was not aware of wagtail until then. So I checked it out and found a precious gem. The customer
-asked me to name a reference or show me some working code, and I commited me to show him the actual "Skill DB"
-django code.</p>
+but I had not been aware of wagtail until then. So I checked it out and found a precious gem.</p>
 </div>
 <div class="paragraph">
-<p>Then I evaluated wagtail a bit more and was fascinated by this framework. I decided spontanously to reimplement
-the "Skill DB" with wagtail, deploy it to AWS EC2, and use it as a show case and to expose my profile to the net.</p>
+<p>The customer asked me to name a reference or show me some working code, and I commited me
+to show him the actual "Skill DB" django code.</p>
 </div>
+<div class="paragraph">
+<p>Then I evaluated wagtail a bit more and was fascinated by this framework. So I decided to redesign my
+skill db portal and split it into two parts. A Web-Service which will be closed source and an
+"Online Profile Page" I&#8217;ll publish to github as an open source project. The Open Source Project can be
+useful for other consultants (developer, tester, &#8230;&#8203;) to expose their profile to the net.
+It can also be named as a show case for my development skills to prospective customers.</p>
+</div>
+<div class="paragraph">
+<p>And here we are.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_goals">Goals</h3>
 <div class="ulist">
 <div class="title">Project Goals</div>
 <ul>
@@ -559,6 +577,7 @@ some are pulic and some need editor or administration roles)</p>
 <p>API to recieve documents (push service) that can be downloaded from Member pages</p>
 </li>
 </ul>
+</div>
 </div>
 </div>
 </div>
@@ -637,7 +656,7 @@ If there is still time remaining at the end, I&#8217;ll add a page where I use B
 <div id="footer">
 <div id="footer-text">
 Version 2<br>
-Last updated 2021-07-06 11:11:23 +0200
+Last updated 2021-07-06 11:26:13 +0200
 </div>
 </div>
 <script type="text/x-mathjax-config">
