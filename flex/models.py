@@ -9,9 +9,12 @@ class FlexPage(Page):
 
     template = "flex/flex_page.html"
 
+    parent_page_types = [ 
+        'profil.ProfilePage',
+    ]
+
     subtitle = models.CharField(max_length = 100, null = True, blank = True)
     
-    content = StreamField()
     
     content_panels = Page.content_panels + [
         FieldPanel("subtitle")

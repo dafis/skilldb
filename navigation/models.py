@@ -43,7 +43,7 @@ class MenuItem(Orderable):
         blank=True,
     )
 
-    page= ParentalKey("Menu", related_name="menu_items")
+    menu= ParentalKey("Menu", related_name="menu_items")
 
     panels = [
         FieldPanel("link_title"),

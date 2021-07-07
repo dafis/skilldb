@@ -5,13 +5,25 @@ class ProjectListingPage(Page):
     """ This page let the visitor explore project rreferences of the developer. 
     """
 
+    parent_page_types = [ 
+        'profil.ProfilePage',
+    ]
+
 class ReferenceListingPage(Page):
     """This page let the visitor explore the developers references. 
     We plan to support the following reference types: Named Customers, 
     Contacts, Example Code, Project Reports and Blog Entries """
+
+    parent_page_types = [ 
+        'profil.ProfilePage',
+    ]
 
 class ExplorerPage(Page):
     """This page let the visitor explore the developers skills. 
     The page is edited completely by the developer. The user can choose
     between several types of information: Skill Groups, Soft Skils, Development Skills, 
     Programming Languages, Frameworks, Tooling, Testing,  Documentation, ..."""
+
+    parent_page_types = [ 
+        'profil.ProfilePage',
+    ]

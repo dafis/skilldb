@@ -12,7 +12,7 @@ INSTALLED_APPS = [
     'blog',
     'portfolio',
     'profil',
-    'menus',
+    'navigation',
     'flex',
 
     'wagtail.contrib.forms',
@@ -27,9 +27,6 @@ INSTALLED_APPS = [
     'wagtail.admin',
     'wagtail.core',
 
-    'wagtail_localize',
-    'wagtail_localize.locales',
-
     'modelcluster',
     'taggit',
 
@@ -40,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-     'django_extensions',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -51,8 +48,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
-    
+   
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
 
@@ -71,7 +67,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.i18n',
             ],
         },
     },
@@ -105,11 +100,11 @@ USE_L10N = True
 USE_TZ = True
 
 # https://docs.wagtail.io/en/stable/advanced_topics/i18n.html#configuration
-WAGTAIL_I18N_ENABLED = True
-WAGTAIL_CONTENT_LANGUAGES = LANGUAGES = [
-    ('en', "English"),
-    ('de', "Deutsch"),
-]
+# WAGTAIL_I18N_ENABLED = True
+# WAGTAIL_CONTENT_LANGUAGES = LANGUAGES = [
+#     ('en', "English"),
+#     ('de', "Deutsch"),
+# ]
 
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 STATICFILES_FINDERS = [
@@ -129,7 +124,6 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-
 
 WAGTAIL_SITE_NAME = "skilldb"
 
