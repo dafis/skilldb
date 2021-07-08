@@ -14,15 +14,55 @@ from wagtail.images.edit_handlers import (
 from modelcluster.models import ParentalKey
 from wagtail.snippets.models import register_snippet
 
-class SoftSkill(models.Model):
-    """The name and a short description of soft skills."""
-    name = models.CharField("Bezeichnung", max_length=100)
-    description = models.TextField("Beschreibung")
 
-    profile = ParentalKey(
-        "profil.ProfilePage", 
-        related_name = "soft_skills",
+class ProfileListingPage(Page):
+    """The profile listing page page. This should only exists once."""
+
+    max_count = 1
+    parent_page_types = [ 
+        'wagtailcore.Page',
+    ]
+
+class ProfilePage(Page):
+    """A consultants profile page."""
+
+    parent_page_types = [ 
+        'wagtailcore.Page',
+        'profil.ProfileListingPage',
+    ]
+
+    first_name = models.CharField("Vorname", max_length=100)
+    last_name = models.CharField("Familienname", max_length=100)
+    birth_date = models.DateField(null=True, blank=True)
+
+    profile_image = models.ForeignKey(
+        'wagtailimages.Image',
+        blank=False,
+        null=True,
+        related_name='+',
+        help_text='Header background image',
+        on_delete=models.SET_NULL,
     )
+
+    content_panels = Page.content_panels + [
+        MultiFieldPanel([
+            FieldPanel("first_name"),
+            FieldPanel("last_name"),
+            FieldPanel("birth_date"),
+        ], heading="Personal Data"),
+        ImageChooserPanel("profile_image"),
+        InlinePanel('soft_skills', label="Soft Skills"),
+        InlinePanel('educations', label="Ausbildung"),
+        InlinePanel('employments', label="Anstellungen"),
+        InlinePanel('trainings', label="Schulungen"),
+        InlinePanel('certificates', label="Zertifikate"),
+    ]
+
+    @property 
+    def full_name(self):
+        return self.first_name + " " + self.last_name
+
+
 
 class Education(models.Model):
     """Important educational phase."""
@@ -70,40 +110,14 @@ class Certificate(models.Model):
         related_name = "certificates",
     )
 
-class ProfilePage(Page):
-    """A consultants profile page."""
+@register_snippet
+class SoftSkill(models.Model):
+    """The name and a short description of soft skills."""
+    name = models.CharField("Bezeichnung", max_length=100)
+    description = models.TextField("Beschreibung")
 
-    parent_page_types = [ 
-        'wagtailcore.Page',
-    ]
-
-    first_name = models.CharField("Vorname", max_length=100)
-    last_name = models.CharField("Familienname", max_length=100)
-    birth_date = models.DateField(null=True, blank=True)
-
-    profile_image = models.ForeignKey(
-        'wagtailimages.Image',
-        blank=False,
-        null=True,
-        related_name='+',
-        help_text='Header background image',
-        on_delete=models.SET_NULL,
+    profile = ParentalKey(
+        "profil.ProfilePage", 
+        related_name = "soft_skills",
     )
 
-    content_panels = Page.content_panels + [
-        MultiFieldPanel([
-            FieldPanel("first_name"),
-            FieldPanel("last_name"),
-        ], heading="Name"),
-        FieldPanel("birth_date"),
-        ImageChooserPanel("profile_image"),
-        InlinePanel('soft_skills', label="Soft Skills"),
-        InlinePanel('educations', label="Ausbildung"),
-        InlinePanel('employments', label="Anstellungen"),
-        InlinePanel('trainings', label="Schulungen"),
-        InlinePanel('certificates', label="Zertifikate"),
-    ]
-
-    @property 
-    def full_name(self):
-        return self.first_name + " " + self.last_name
