@@ -93,7 +93,7 @@ invest too much time.
 
 ## License
 
-Distributed under the UNLICENSE. See `LICENSE` for more information.
+Distributed under the MIT license. See `LICENSE` for more information.
 
 ## Contact
 
