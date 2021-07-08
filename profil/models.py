@@ -102,7 +102,7 @@ class Training(models.Model):
 class Certificate(models.Model):
     """Achieved certificate."""
     name = models.CharField(_("Title"), max_length=100)
-    provider = models.CharField(_("Instution"), max_length=100)
+    provider = models.CharField(_("Institution"), max_length=100)
     description = models.TextField(_("Description"))
 
     profile = ParentalKey(
