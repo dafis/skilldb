@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-08 10:26+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: profil/models.py:36
+msgid "First Name"
+msgstr "Vorname"
+
+#: profil/models.py:37
+msgid "Last Name"
+msgstr "Familienname"
+
+#: profil/models.py:38
+msgid "Birth Date"
+msgstr "Geburtsdatum"
+
+#: profil/models.py:44
+msgid "Profile Image"
+msgstr "Profilbild"
+
+#: profil/models.py:53
+msgid "Personal Data"
+msgstr "Persönliche Daten"
+
+#: profil/models.py:55
+msgid "Soft Skills"
+msgstr "Soft Skills"
+
+#: profil/models.py:56
+msgid "Education"
+msgstr "Ausbildung"
+
+#: profil/models.py:57
+msgid "Employments"
+msgstr "Anstellungen"
+
+#: profil/models.py:59
+msgid "Certificates"
+msgstr "Zertifikate"
+
+#: profil/models.py:69 profil/models.py:93 profil/models.py:104
+msgid "Title"
+msgstr "Titel"
+
+#: profil/models.py:70 profil/models.py:105
+msgid "Institution"
+msgstr "Institut"
+
+#: profil/models.py:71 profil/models.py:84 profil/models.py:95
+#: profil/models.py:106
+msgid "Description"
+msgstr "Beschreibung"
+
+#: profil/models.py:72
+msgid "From"
+msgstr "Von"
+
+#: profil/models.py:73
+msgid "To"
+msgstr "Bis"
+
+#: profil/models.py:83
+msgid "Employer"
+msgstr "Arbeitgeber"
+
+#: profil/models.py:94
+msgid "Provider"
+msgstr "Anbieter"
+
+#: profil/models.py:116
+msgid "Name"
+msgstr "Name"
