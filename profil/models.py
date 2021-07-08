@@ -40,7 +40,7 @@ class Education(models.Model):
 class Employment(models.Model):
     """Employment if applicable."""
     name = models.CharField("Titel", max_length=100)
-    provider = models.TextField("Arbeitgeber", max_length=100)
+    employer = models.TextField("Arbeitgeber", max_length=100)
     description = models.TextField("Beschreibung")
 
     profile = ParentalKey(
@@ -69,18 +69,6 @@ class Certificate(models.Model):
         "profil.ProfilePage", 
         related_name = "certificates",
     )
-
-
-
-class ConsultantRolePage(Page):
-    """Define consultant roles one was active with."""
-    name = models.CharField("Titel", max_length=100)
-    parent_page_types = [ 
-        'profil.ProfilePage',
-    ]
-
-
-
 
 class ProfilePage(Page):
     """A consultants profile page."""
