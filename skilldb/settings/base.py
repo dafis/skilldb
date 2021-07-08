@@ -2,6 +2,8 @@
 # https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
+# use lazy to avoid circular import
+from django.utils.translation import gettext_lazy as _
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
@@ -42,13 +44,16 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
+    # this position between session and common is mandatory
+    # Cached Middleware (if used) must be positioned before Locale Middleware
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-   
+
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
 
@@ -100,11 +105,11 @@ USE_L10N = True
 USE_TZ = True
 
 # https://docs.wagtail.io/en/stable/advanced_topics/i18n.html#configuration
-# WAGTAIL_I18N_ENABLED = True
-# WAGTAIL_CONTENT_LANGUAGES = LANGUAGES = [
-#     ('en', "English"),
-#     ('de', "Deutsch"),
-# ]
+WAGTAIL_I18N_ENABLED = True
+WAGTAIL_CONTENT_LANGUAGES = LANGUAGES = [
+    ('en', _("English")),
+    ('de', _("German")),
+]
 
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 STATICFILES_FINDERS = [
